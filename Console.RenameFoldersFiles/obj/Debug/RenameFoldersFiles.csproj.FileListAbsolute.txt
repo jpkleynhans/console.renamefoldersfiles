@@ -1,0 +1,7 @@
+C:\Git Projects\Console.RenameFoldersFiles\Console.RenameFoldersFiles\bin\Debug\Renaming.exe.config
+C:\Git Projects\Console.RenameFoldersFiles\Console.RenameFoldersFiles\bin\Debug\Renaming.exe
+C:\Git Projects\Console.RenameFoldersFiles\Console.RenameFoldersFiles\bin\Debug\Renaming.pdb
+C:\Git Projects\Console.RenameFoldersFiles\Console.RenameFoldersFiles\obj\Debug\RenameFoldersFiles.csprojAssemblyReference.cache
+C:\Git Projects\Console.RenameFoldersFiles\Console.RenameFoldersFiles\obj\Debug\RenameFoldersFiles.csproj.CoreCompileInputs.cache
+C:\Git Projects\Console.RenameFoldersFiles\Console.RenameFoldersFiles\obj\Debug\Renaming.exe
+C:\Git Projects\Console.RenameFoldersFiles\Console.RenameFoldersFiles\obj\Debug\Renaming.pdb

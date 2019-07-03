@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29025.244
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Renaming", "Renaming\Renaming.csproj", "{47AA0E79-14E7-4225-8006-7B3D62659862}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RenameFoldersFiles", "Console.RenameFoldersFiles\RenameFoldersFiles.csproj", "{BA55389A-5EE6-4C8C-83EA-0CD1F32B17F5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{47AA0E79-14E7-4225-8006-7B3D62659862}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{47AA0E79-14E7-4225-8006-7B3D62659862}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{47AA0E79-14E7-4225-8006-7B3D62659862}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{47AA0E79-14E7-4225-8006-7B3D62659862}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA55389A-5EE6-4C8C-83EA-0CD1F32B17F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA55389A-5EE6-4C8C-83EA-0CD1F32B17F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA55389A-5EE6-4C8C-83EA-0CD1F32B17F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA55389A-5EE6-4C8C-83EA-0CD1F32B17F5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
