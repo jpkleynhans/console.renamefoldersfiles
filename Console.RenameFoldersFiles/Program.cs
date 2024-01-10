@@ -2,17 +2,53 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Text.RegularExpressions;
 
 namespace Renaming
 {
     class Program
     {
         private readonly static List<string> bannedDirectories = new List<string>() { "bin", "obj" };
-        private readonly static List<string> mimeTypes = new List<string>() { ".cs", ".sln", ".config", ".txt", ".csproj", ".user", ".nuspec", ".xdt" };
+        private readonly static List<string> mimeTypes = new List<string>()
+        {
+            ".ts",
+            ".html",
+            ".scss",
+            ".cs",
+            ".sln",
+            ".config",
+            ".txt",
+            ".csproj",
+            ".user",
+            ".nuspec",
+            ".xdt",
+            ".sql"
+        };
 
         static void Main(string[] args)
         {
-            Init();
+            Run();
+        }
+
+        static void Run()
+        {
+            Console.WriteLine("What would you like to do?");
+            Console.WriteLine("");
+            Console.WriteLine("1. Rename");
+            Console.WriteLine("2. Create from file");
+            Console.WriteLine("");
+
+            switch (Console.ReadLine())
+            {
+                case "1":
+                    Init();
+                    break;
+                case "2":
+                    CreateFromFile();
+                    break;
+                default:
+                    break;
+            }
         }
 
         static void Init()
@@ -45,8 +81,62 @@ namespace Renaming
 
             if (Console.ReadKey().Key == ConsoleKey.Enter)
             {
-                Init();
+                Run();
             }
+        }
+
+        static void CreateFromFile(bool reInit = false, string directory = "", string wordToReplace = "")
+        {
+            var wordToReplaceWith = "";
+
+            if (!reInit)
+            {
+                while (string.IsNullOrEmpty(directory))
+                {
+                    Console.WriteLine("Enter directory and filename with extension:");
+                    directory = Console.ReadLine();
+                }
+
+                while (string.IsNullOrEmpty(wordToReplace))
+                {
+                    Console.WriteLine("Enter word to replace:");
+                    wordToReplace = Console.ReadLine();
+                }
+            }
+
+            while (string.IsNullOrEmpty(wordToReplaceWith))
+            {
+                Console.WriteLine("Enter word to replace with:");
+                wordToReplaceWith = Console.ReadLine();
+            }
+            CreateAndRenameBaseFiles(directory, wordToReplace, wordToReplaceWith);
+
+            Console.WriteLine("Press Enter to Continue or Y to do another");
+
+            if (Console.ReadKey().Key == ConsoleKey.Y)
+            {
+                Console.WriteLine("");
+
+                CreateFromFile(true, directory, wordToReplace);
+            }
+            if (Console.ReadKey().Key == ConsoleKey.Enter)
+            {
+                Run();
+            }
+        }
+
+        private static void CreateAndRenameBaseFiles(string path, string source, string dest)
+        {
+            var fi = new FileInfo(path);
+            var newDirectory = $"{fi.Directory}\\{dest}";
+            var fileNameReplaced = fi.Name.Replace(source, dest);
+            var code = File.ReadAllText(fi.FullName);
+            code = Regex.Replace(code, @"\b" + Regex.Escape(source) + @"\b", $"{dest}");
+
+            if (!Directory.Exists(newDirectory))
+                Directory.CreateDirectory(newDirectory);
+
+            File.WriteAllText($"{newDirectory}\\{fileNameReplaced}", code);
         }
 
         private static void RenameBaseFiles(string path, string source, string dest)

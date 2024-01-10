@@ -1,7 +1,0 @@
-C:\Users\JPK\source\repos\Renaming\Renaming\bin\Debug\Renaming.exe.config
-C:\Users\JPK\source\repos\Renaming\Renaming\bin\Debug\Renaming.exe
-C:\Users\JPK\source\repos\Renaming\Renaming\bin\Debug\Renaming.pdb
-C:\Users\JPK\source\repos\Renaming\Renaming\obj\Debug\Renaming.csprojAssemblyReference.cache
-C:\Users\JPK\source\repos\Renaming\Renaming\obj\Debug\Renaming.csproj.CoreCompileInputs.cache
-C:\Users\JPK\source\repos\Renaming\Renaming\obj\Debug\Renaming.exe
-C:\Users\JPK\source\repos\Renaming\Renaming\obj\Debug\Renaming.pdb
